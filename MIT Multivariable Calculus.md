@@ -626,6 +626,8 @@ On the other hand, if for any closed curve, the formula above is established, th
 
 > path independence is equivalent to conservative.
 
+### Gradient Field and Potential Function
+
 #### Discriminant of Gradient Field
 
 If a vector field $\mathbf{F}=\mathrm{Mi}+\mathrm{Nj}​$ is a gradient field, its potential function $f(x,y)​$, thus:
@@ -633,9 +635,9 @@ $$
 \begin{array}{c}{\vec{F}=M \hat{\imath}+N \hat{\jmath}=\nabla f=\left\langle f_{x}, f_{y}\right\rangle} \\ 
 {\quad \Rightarrow M=f_{x}, \quad N=f_{y}} \\ {f_{x y}=f_{y x}\Rightarrow M_{y}=N_{x}}\end{array}
 $$
-So, for a vector field $\mathbf{F}=\mathrm{Mi}+\mathrm{Nj}$ that is **defined everywhere in the plane and can be guided everywhere**, if there is $My = Nx​$, then this vector field is the gradient field.
+So, for a vector field $\mathbf{F}=\mathrm{Mi}+\mathrm{Nj}​$ that is **defined everywhere in the plane and can be guided everywhere**, if there is $My = Nx​$, then this vector field is the gradient field.
 
-#### Find Gradient Field
+#### Find Potential function
 
 Take gradient field $\mathbf{F}=\left(4 x^{2}+8 x y\right) \mathbf{i}+\left(3 y^{2}+4 x^{2}\right) \mathbf{j}$ as an example.
 
@@ -663,4 +665,21 @@ Since $f(0,0)$ is a constant,remove the subscripts of $x$ and $y$ and get the po
 $$
 f(x, y)=\frac{4}{3} x^{3}+y^{3}+4 x^{2} y+C
 $$
-ss
+##### Indefinite integral
+
+The potential function $f$ satisfy:
+$$
+\left\{\begin{array}{l}{f_{x}=4 x^{2}+8 x y} \\ {f_{y}=3 y^{2}+4 x^{2}}\end{array}\right.
+$$
+Firstly, think $y$ as a constant , find the integral of $x$:
+$$
+f=\int\left(4 x^{2}+8 x y\right) d x=\frac{4}{3} x^{3}+4 x^{2} y+g(y)
+$$
+Since $f_x$ is partial derivative, so the final is not a constant $C$, but a function $g(y)$ instead.
+$$
+\begin {equation} 
+\begin{array}{l}{f_{y}=\frac{\partial f}{\partial y}=\frac{\partial}{\partial y}\left(\frac{4}{3} x^{3}+4 x^{2} y+g(y)\right)=4 x^{2}+g^{\prime}(y)=3 y^{2}+4 x^{2}} \\ {\Rightarrow g^{\prime}(y)=3 y^{2}} \\ {\quad\Rightarrow g(y)=\int 3 y^{2} d y=y^{3}+C} \\ {\Rightarrow f(x, y)=\frac{4}{3} x^{3}+4 x^{2} y+g(y)=\frac{4}{3} x^{3}+4 x^{2} y++y^{3}+C}\end{array}
+ \end {equation}
+$$
+Note: $g(y)$ can’t contain $x$, otherwise $g(y)$ isn’t equal to 0 when calculate $f_x$.
+
