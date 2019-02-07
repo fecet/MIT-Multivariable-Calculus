@@ -894,3 +894,4 @@ $$
 \oint_{C}(M d y-N d x)=\iint_{R} \operatorname{div}(\vec{F}) d A=\iint_{R}\left(M_{x}+N_{y}\right) d A\\
 \oint_{C}(M d x+N d y)=\iint_{R} \operatorname{curl}(\vec{F}) d A=\iint_{R}\left(N_{x}-M_{y}\right) d A
 $$
+
