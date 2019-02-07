@@ -699,7 +699,7 @@ For example, if the swirl of the airflow or water flow is 0, it means there is n
 $$
 \operatorname{curl}(x \hat{\imath}+y \hat{\jmath})=N_{x}-M_{y}=0
 $$
-In complex motion, some points may rotate more than others, and the curl is not constant at this time, it depends on the position of the point, that is, the values of x and y. In the weather map, the high rotation may be a typhoon or a tornado:
+In complex motion, some points may rotate more than others, and the curl is not constant at this time, it depends on the position of the point, that is, the values of $x$ and $y$. In the weather map, the high rotation may be a typhoon or a tornado:
 
 ![img](https://images2018.cnblogs.com/blog/1203675/201804/1203675-20180424150724854-1856234639.png)
 
@@ -793,9 +793,7 @@ $$
 \iint_{R} x d A=4 \iint_{\frac{R}{4}} x d A=2 \pi
 $$
 
-### Flux and Divergence
-
-#### Flux
+### Flux
 
 Flux is actually a kind of line integral. If there is a plane curve $C$ and a vector field $F​$ on a plane, the flux is represented by a symbol:
 $$
@@ -829,14 +827,70 @@ $$
 $$
 The above formula is also known as the orthogonal form of the Green's theorem, which is another expression of the Green's theorem. 
 
-#### Divergence
+#### Comparison between work and flux
+
+- Work:
+  $$
+  \int_{C} \vec{\mathbf{F}} \cdot d \vec{\mathbf{r}}=\int_{C} \vec{\mathbf{F}} \cdot \hat{\mathbf{T}} d s
+  $$
+  summing **tangential** component of $\vec{F}$.
+
+- Flux:
+  $$
+  \int_{C} \vec{\mathbf{F}} \cdot \hat{\mathbf{n}} d s
+  $$
+  summing **normal** component of $\vec{F}$.
+
+### Divergence
 
 For a vector field $\vec{F}=\langle M, N\rangle$, we have:
 $$
 \operatorname{div}(\vec{F})=M_{x}+N_{y}
 $$
-Where $div(\vec{F})$ is divergence, it measures the degree of fluid divergence. Now, the Green’s theorem can be written as:
+Where $div(\vec{F})​$ is divergence, it measures the degree of fluid divergence. 
+
+#### Physical interpretation  of divergence
+
+If we think of $\vec{v}$ as the **velocity field** of a flowing fluid, then $div\ \vec{v}$ represents the net rate of change of the mass of the fluid flowing from the point $(x,y,z)$ per unit volume. This can also be thought of as the **tendency of a fluid to diverge​** from a point, which can become less dense, more dense or just unchanged:
+
+![Divergence](https://img-blog.csdn.net/20171104134050399)
+
+### Curl and Divergence
+
+#### Delta
+
+$\Delta$ is used as a shorthand form to simplify many long mathematical expressions. It is most commonly used to simplify expressions for the gradient, divergence, curl, directional derivative, and Laplacian.
+
+1. The vector derivative of a scalar field $f$ is called the **gradient**, and it can be represented as: 
+   $$
+   \operatorname{grad} f=\left\langle\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, \frac{\partial f}{\partial z}\right\rangle=\nabla f
+   $$
+
+2. The **divergence** of a vector field $\vec{v}=\langle P, Q, R\rangle$ is a scalar function that can be represented as: 
+   $$
+   \operatorname{div}\ \vec{v}=\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z}=\nabla \cdot \vec{v}
+   $$
+
+3. The **curl** of a vector field $\vec{v}=\langle P, Q, R\rangle$ is a vector function that can be represented as: 
+   $$
+   \operatorname{curl} \vec{v}=\left[ \begin{array}{ccc}{\vec{i}} & {\vec{j}} & {\vec{k}} \\ {\frac{\partial}{\partial x}} & {\frac{\partial}{\partial y}} & {\frac{\partial}{\partial z}} \\ {P} & {Q} & {R}\end{array}\right]=\nabla \times \vec{v}
+   $$
+
+#### Review of Green’s Theorem
+
+The Green's theorem is actually about the relationship between a particular type of double integrals(on closed paths). The Green's theorem must satisfy the following elements:
+
+- $C$ a **simple closed** curve (simple means it never intersects itself)
+- $R$ is the **interior** of $C$
+- C must be **positively oriented**
+- C must be **piecewise smooth**
+
+Like the following figure:
+
+![Greenâs Theorem](https://img-blog.csdn.net/20171102084135021)
+
+Now, the Green’s theorem can be written as:
 $$
 \oint_{C}(M d y-N d x)=\iint_{R} \operatorname{div}(\vec{F}) d A=\iint_{R}\left(M_{x}+N_{y}\right) d A\\
-\oint_{C}(M d x+N d y)=\iint_{R} \operatorname{curl}(\vec{F}) d A=\iint_{R}\left(N_{x}-M_{y}\right) d A
+\oint_{C}(M d x+N d y)=\iint_{R} \operatorname{curl}(\vec{F}) d A=\iint_{R}\left(N_{x}-M_{y}\right) d A
 $$
