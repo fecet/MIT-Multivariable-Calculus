@@ -683,7 +683,7 @@ $$
 $$
 Note: $g(y)$ can’t contain $x$, otherwise $g(y)$ isn’t equal to 0 when calculate $f_x$.
 
-### Green Formula
+### Green's theorem
 
 #### Curl
 
@@ -693,25 +693,46 @@ curl(\vec{F})=N_x-M_y
 $$
 The magnitude of the curl indicates the degree of twist, and positive or negative indicates whether the rotation is clockwise or counterclockwise. As can be seen from the previous chapter, the convolution is 0 in the conservative.
 
-For example, if the swirl of the airflow or water flow is 0, it means there is no eddy current. Such that，$\mathbf{F}=x\mathrm{i}+y\mathrm{j}$:![img](https://images2018.cnblogs.com/blog/1203675/201804/1203675-20180424150618773-1570423413.png)
+For example, if the swirl of the airflow or water flow is 0, it means there is no eddy current. Such that，$\mathbf{F}=x\mathrm{i}+y\mathrm{j}$:
 
-![img](https://images2018.cnblogs.com/blog/1203675/201804/1203675-20180424150647733-1922245060.png)
-
+![img](xyvec.svg)
+$$
+\operatorname{curl}(x \hat{\imath}+y \hat{\jmath})=N_{x}-M_{y}=0
+$$
 In complex motion, some points may rotate more than others, and the curl is not constant at this time, it depends on the position of the point, that is, the values of x and y. In the weather map, the high rotation may be a typhoon or a tornado:
 
 ![img](https://images2018.cnblogs.com/blog/1203675/201804/1203675-20180424150724854-1856234639.png)
 
 **In the force field, the curl measures the torque at any point, or the torque is the corresponding amount of force rotation.**
 
-#### Green Formula
+#### Green's theorem
 
-As shown in the figure below, there is a closed curve $C$, and the area enclosed by it is $R$. Then we want to calculate the line integral of  $C$，there are two choices, one is direct calculation and the other is using Green formula.
+As shown in the figure below, there is a closed curve $C$, and the area enclosed by it is $R$. Then we want to calculate the line integral of  $C$，there are two choices, one is direct calculation and the other is using Green's theorem.
 
 ![img](https://images2018.cnblogs.com/blog/1203675/201804/1203675-20180424150743449-1442830162.png)
 
-Green formula:
+Green's theorem:
 $$
 \oint \vec{F}\ d \vec{r}=\iint_R curl(\vec{F})dA\\
 \oint(Mdx+Ndy)=\iint_R (N_x-M_y)dA
 $$
-Note,  in  the above formula, the curve is defined as c
+Note,  in  the above formula, the curve is defined as counterclockwise, otherwise, the right hand of above formula is $\iint_{R}-\left(N_{x}-M_{y}\right) d A$
+
+#### Proof of Green's theorem
+
+This theorem looks pretty strange, how it comes from?
+
+Assume the field is defined as $\mathbf{F}=\mathrm{Mi}$, that is $\mathbf{N}=0$, now we try to prove:
+$$
+\oint_{C} M d x=\iint_{R}-M_{y} d A
+$$
+If we succeed, for the same reason:
+$$
+\oint_{C} N d y=\iint_{R} N_{x} d A
+$$
+Add both of them, we prove Green's theorem.
+
+Firstly, consider the following picture:
+
+![img](https://images2018.cnblogs.com/blog/1203675/201804/1203675-20180424150841603-603694671.png)
+
