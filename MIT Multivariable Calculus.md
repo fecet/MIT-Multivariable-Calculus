@@ -730,9 +730,37 @@ If we succeed, for the same reason:
 $$
 \oint_{C} N d y=\iint_{R} N_{x} d A
 $$
-Add both of them, we prove Green's theorem.
+Add together, we prove Green's theorem.
 
 Firstly, consider the following picture:
 
 ![img](https://images2018.cnblogs.com/blog/1203675/201804/1203675-20180424150841603-603694671.png)
+
+The closed area enclosed by C is divided into two parts, C1 and C2, which are all counterclockwise. 
+
+The line integrals of C1 and C2 are added together, and the dividing line is calculated twice more. 
+
+However, pay attention to the direction of C1 and C2 on the boundary line, the two are opposite, so they are offset on the boundary line, so:
+$$
+\oint_{C} M d x=\oint_{C_{1}} M d x+\oint_{C_{2}} M d x
+$$
+If the Green's theorem is established:
+$$
+\begin{aligned} \oint_{C} M d x &=\oint_{C_{1}} M d x+\oint_{C_{2}} M d x \\ &=-\iint_{R_{1}} M_{y} d A-\iint_{R_{2}} M_{y} d A \\ &=-\iint_{R} M_{y} d A \end{aligned}
+$$
+By extension, for more complex curves, it can always be divided into a number of relatively simple small regions. If the Green's formula is true, the line integral of the curve is equal to the sum of the double integrals of all small regions. 
+
+Hence, for simple small areas, you can divide into a myriad of vertical rectangles:
+
+![](verrec.svg)
+
+On $C_1$ and $C_3$, $dx=0$
+$$
+\begin{aligned} \oint_{c} M d x &=\int_{C_{1}} M d x+\int_{c_{2}} M d x+\int_{c_{3}} M d x+\int_{c_{4}} M d x \\ &=\int_{c_{2}} M d x+\int_{c_{4}} M d x \\ &=\int_{b}^{a} M(x, f 1(x)) d x+\int_{a}^{b} M(x, f 2(x)) d x \\ &=-\int_{a}^{b} M(x, f 1(x)) d x+\int_{a}^{b} M(x, f 2(x)) d x \end{aligned}
+$$
+On the other hand:
+$$
+\begin{aligned} \iint_{R}-M_{y} d A &=-\int_{a}^{b} \int_{f 2(x)}^{f 1(x)} \frac{\partial M}{\partial y} d y d x \\ &=-\int_{a}^{b}(M(x, f 1(x))-M(x, f 2(x))) d x \\ &=-\int_{a}^{b} M(x, f 1(x)) d x+\int_{a}^{b} M(x, f 2(x)) d x \\ &=\oint_{C} M d x \end{aligned}
+$$
+QED.
 
