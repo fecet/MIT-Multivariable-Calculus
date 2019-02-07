@@ -784,11 +784,59 @@ $$
 $$
 For the sake of simplicity, integral the $\frac{1}{4}$ circle:
 
-![img](https://images2018.cnblogs.com/blog/1203675/201804/1203675-20180424151209563-1375804325.png)
+![img](quartero.svg)
 $$
 \iint_{\frac{R}{4}} x d A=\int_{2}^{3} \int_{\sqrt{1-(x-2)^{2}}}^{0} x d y d x=\int_{2}^{3}-x \sqrt{1-(x-2)^{2}} d x=\frac{\pi}{2}
 $$
 In summary:
 $$
 \iint_{R} x d A=4 \iint_{\frac{R}{4}} x d A=2 \pi
+$$
+
+### Flux and Divergence
+
+#### Flux
+
+Flux is actually a kind of line integral. If there is a plane curve $C$ and a vector field $F​$ on a plane, the flux is represented by a symbol:
+$$
+\int_{C} \vec{F} \cdot \hat{n} d s
+$$
+Where $ds$ is the micro-element of curve $C$, and $\hat{n}$ is the unit normal vector perpendicular to $ds$:
+
+![img](https://images2018.cnblogs.com/blog/1203675/201805/1203675-20180502182333157-1141191212.png)
+
+If $F$ is seen as a velocity field, such as, the water is flowing at a certain speed, then $F$ is explained as the flow of water at every point on the plane. The flux of curve $C$ in $F$ measures how much fluid flows through curve $C$ per unit time. $F$ can be regarded as a river, $C​$ is a fishing net located in the river, the flux measures how much river water flows through the fishing net per unit time.
+
+As the following figure:
+
+![img](flux.svg)
+
+After unit time, water flows through $\Delta s$ is a parallelogram:
+
+![](para.svg)
+
+Its area can be calculated as:
+$$
+Area =\Delta S\cdot \text {Height}=\Delta S(\vec{F} \cdot \hat{n})
+$$
+Assume vector field $F=\langle M,N \rangle$:
+$$
+\int_{C} \vec{F} \cdot \hat{n} d s=\int_{C}\langle M, N\rangle \cdot\langle d y,-d x\rangle=\int_{C} M d y-N d x
+$$
+According to Green’s theorem:
+$$
+\oint_{C} M d y-N d x=\iint_{R}\left(M_{x}+N_{y}\right) d A
+$$
+The above formula is also known as the orthogonal form of the Green's theorem, which is another expression of the Green's theorem. 
+
+#### Divergence
+
+For a vector field $\vec{F}=\langle M, N\rangle$, we have:
+$$
+\operatorname{div}(\vec{F})=M_{x}+N_{y}
+$$
+Where $div(\vec{F})$ is divergence, it measures the degree of fluid divergence. Now, the Green’s theorem can be written as:
+$$
+\oint_{C}(M d y-N d x)=\iint_{R} \operatorname{div}(\vec{F}) d A=\iint_{R}\left(M_{x}+N_{y}\right) d A\\
+\oint_{C}(M d x+N d y)=\iint_{R} \operatorname{curl}(\vec{F}) d A=\iint_{R}\left(N_{x}-M_{y}\right) d A
 $$
