@@ -764,3 +764,31 @@ $$
 $$
 QED.
 
+#### Example
+
+![](greenex.svg)
+
+As shown in the figure above, $C​$ is a circle with a radius of 1 that rotates counterclockwise.
+
+Calculates the line integral of $C$ in the field $F=\langle y e^{-x},\frac{x^2}{2}-e^{-x}\rangle$:
+$$
+\oint_{c} \vec{F} d \vec{r}=\oint_{c}\left(y e^{-x} d x+\left(\frac{1}{2} x^{2}-e^{-x}\right) d y\right)=?
+$$
+Firstly, determine if the field is a conservative field:
+$$
+\begin{array}{c}{M_{y}=\frac{\partial}{\partial y} y e^{-x}=e^{-x}, \quad N_{x}=\frac{\partial}{\partial x}\left(\frac{1}{2} x^{2}-e^{-x}\right)=x+e^{-x}} \\ {M_{y} \neq N_{x}}\end{array}
+$$
+Apply Green’s theorem:
+$$
+\oint_{C} \vec{F} d \vec{r}=\iint_{R}\left(N_{x}-M_{y}\right) d A=\iint_{R}\left(x+e^{-x}-e^{-x}\right) d A=\iint_{R} x d A
+$$
+For the sake of simplicity, integral the $\frac{1}{4}$ circle:
+
+![img](https://images2018.cnblogs.com/blog/1203675/201804/1203675-20180424151209563-1375804325.png)
+$$
+\iint_{\frac{R}{4}} x d A=\int_{2}^{3} \int_{\sqrt{1-(x-2)^{2}}}^{0} x d y d x=\int_{2}^{3}-x \sqrt{1-(x-2)^{2}} d x=\frac{\pi}{2}
+$$
+In summary:
+$$
+\iint_{R} x d A=4 \iint_{\frac{R}{4}} x d A=2 \pi
+$$
