@@ -10,7 +10,7 @@ Because the dot product results in a scalar, it is also called the **scalar prod
 
 #### Algebraic View of Dot Product
 
-Given two vectors $ \vec{a}=\left\langle a_{1}, a_{2}, a_{3}\right\rangle $, $ \vec{b}=\left\langle b_{1}, b_{2,} b_{3}\right\rangle ​$, their dot product is defined as following:
+Given two vectors $ \vec{a}=\left\langle a_{1}, a_{2}, a_{3}\right\rangle $, $ \vec{b}=\left\langle b_{1}, b_{2,} b_{3}\right\rangle $, their dot product is defined as following:
 $$
 \vec{a} \cdot \vec{b}=a_{1} b_{1}+a_{2} b_{2}+a_{3} b_{3}
 $$
@@ -682,4 +682,8 @@ $$
  \end {equation}
 $$
 Note: $g(y)$ can’t contain $x$, otherwise $g(y)$ isn’t equal to 0 when calculate $f_x$.
+
+### Green Formula
+
+#### Curl
 
