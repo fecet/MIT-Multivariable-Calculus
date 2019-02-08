@@ -134,7 +134,7 @@ The total differentials of $f(x, y, z)$:
 $$
 d f=f_{x} d x+f_{y} d y+f_{z} d z=\frac{\partial f}{\partial x} d x+\frac{\partial f}{\partial y} d y+\frac{\partial f}{\partial z} d z
 $$
-N.B. Be sure to distinguish between $d​$ and $∂​$, which represent total differential and partial differential, respectively. When you use partial differentiation, remember that it cannot be simplified, such as:
+N.B. Be sure to distinguish between $d$ and $∂$, which represent total differential and partial differential, respectively. When you use partial differentiation, remember that it cannot be simplified, such as:
 
 For total differentials, we have: $\frac{d f}{d x} \frac{d x}{d t}=\frac{d f}{d t}​$, but for partial differentiation, you can’t do this: $\frac{\partial f}{\partial x} \frac{\partial x}{\partial t} \neq \frac{\partial f}{\partial t}​$, $d f​$ isn’t $\Delta f​$, the total differential above can be explained by how infinitesimal changes in $x, y, z​$ affect $f​$, but Professor Denis Auroux prefers to interpret it as tangent approximation, $\Delta f \approx f_{x} \Delta x+f_{y} \Delta y+f_{z} \Delta z​$, when the $\Delta​$ variables tend to 0, approximate becomes equal.
 
@@ -526,7 +526,7 @@ For piecewise smooth cure(like following figure), its calculation is also very s
 $$
 \int_{C} f(x, y) d s=\int_{C_{1}} f(x, y) d s+\int_{C_{2}} f(x, y) d s+\int_{C_{3}} f(x, y) d s+\int_{C_{4}} f(x, y) d s
 $$
-![piecewise smooth curves](https://img-blog.csdn.net/20171031103509144)
+  ![piecewise smooth curves](https://img-blog.csdn.net/20171031103509144)
 
 There are two properties about this type of curve integral: 
 
@@ -894,4 +894,32 @@ $$
 \oint_{C}(M d y-N d x)=\iint_{R} \operatorname{div}(\vec{F}) d A=\iint_{R}\left(M_{x}+N_{y}\right) d A\\
 \oint_{C}(M d x+N d y)=\iint_{R} \operatorname{curl}(\vec{F}) d A=\iint_{R}\left(N_{x}-M_{y}\right) d A
 $$
+
+### Connected Area
+
+There is a precondition for the Green’s theorem: the vector field needs to be defined at everywhere in the $R$ region, and more strictly $F$ is defined at the R region. If there is a point that is not defined in the vector field, you cannot simply use the Green’s theorem, for example:
+$$
+\vec{F}=\frac{-y \hat{\imath}+x \hat{\jmath}}{x^{2}+y^{2}}
+$$
+Let $x=\cos \theta$, $y=\sin \theta$:                     
+$$
+\begin{aligned} N_{x} &=\frac{\partial}{\partial x}\left(\frac{x}{x^{2}+y^{2}}\right)=\frac{d x}{d \theta} \frac{d}{d x}\left(\frac{\cos \theta}{\cos ^{2} \theta+\sin ^{2} \theta}\right)=-\sin \theta \cos \theta \\ M_{y} &=\frac{\partial}{\partial y}\left(\frac{-y}{x^{2}+y^{2}}\right)=\frac{d y}{d \theta} \frac{d}{d x}\left(\frac{-\sin \theta}{\cos ^{2} \theta+\sin ^{2} \theta}\right)=-\sin \theta \cos \theta \end{aligned}
+$$
+$F$ is meaningful except for the origin, and the curl is 0 at any position. If there is also a definition at the origin, this will be a conservative field. 
+
+There are two cases at this point, the curve encloses the origin and the curve outside the origin:
+
+![img](https://images2018.cnblogs.com/blog/1203675/201805/1203675-20180514155334448-1243616671.png)
+
+If you dig the origin on $C_2$, the new $R$ area satisfy the Green’s theorem:
+
+![img](https://images2018.cnblogs.com/blog/1203675/201805/1203675-20180514155348425-381149903.png)
+
+If you link a continuous curve with two opposite vectors, $C$ and $C'$ become a curve that communicates with each other, as shown in the following figure:
+
+![img](https://images2018.cnblogs.com/blog/1203675/201805/1203675-20180514155414572-2022119420.png)
+$$
+\oint_{C} \hat{F} \cdot d \hat{r}+\oint_{c^{\prime}} \hat{F} \cdot d \hat{r}=\iint_{R} \operatorname{curl}(\vec{F}) d A=0
+$$
+The $R$ region is called a multi-connected zone, as opposed to a single connected zone. In other words, a single connected area is an area without "holes", and a multi-connected area is an area with "holes" that must be on $R$:
 
