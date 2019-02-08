@@ -921,5 +921,5 @@ If you link a continuous curve with two opposite vectors, $C$ and $C'$ become a 
 $$
 \oint_{C} \hat{F} \cdot d \hat{r}+\oint_{c^{\prime}} \hat{F} \cdot d \hat{r}=\iint_{R} \operatorname{curl}(\vec{F}) d A=0
 $$
-The $R$ region is called a multi-connected zone, as opposed to a single connected zone. In other words, a single connected area is an area without "holes", and a multi-connected area is an area with "holes" that must be on $R$:
+The $R$ region is called a multi-connected zone, as opposed to a single connected zone. In other words, a single connected area is an area without "holes", and a multi-connected area is an area with "holes" that must be on $R$.
 
