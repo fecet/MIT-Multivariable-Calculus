@@ -76,7 +76,7 @@ A **quadric surface** is the graph in space of a second-degree equation in $x,y$
 $$
 A x^{2}+B y^{2}+C z^{2}+D z=EThe basic quadric surfaces are **ellipsoids,paraboloidsme**The basic quadric surfaces are **ellipsoids,paraboloidsme**
 $$
-The basic quadric surfaces are **ellipsoids,paraboloids,elliptical cons and hyperboloids**.
+The basic quadric surfaces are **ellipsoids,paraboloids,elliptical cone and hyperboloids**.
 
 The ellipsoid
 $$
@@ -96,11 +96,8 @@ the cross-sections in planes perpendicular to the $z$-axis above and below the $
 
 ![1555251622298](assets/1555251622298.png)
 
-![1555251656862](assets/1555251656862.png)
-
 ![1555251667835](assets/1555251667835.png)
 
 ![1555251687061](assets/1555251687061.png)
 
 ![1555251727061](assets/1555251727061.png)
-
