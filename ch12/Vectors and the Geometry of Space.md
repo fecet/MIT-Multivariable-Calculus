@@ -34,6 +34,32 @@ Hence
 $$
 u\times v \cdot w=\left| \begin{array}{ccc}{\mathbf{i}} & {\mathbf{j}} & {\mathbf{k}} \\ {u_{1}} & {u_{2}} & {u_{3}} \\ {v_{1}} & {v_{2}} & {v_{3}}\end{array}\right|\cdot (w_1\mathbf{i}+w_2\mathbf{j}+w_3\mathbf{k})=\left| \begin{array}{lll}{u_{1}} & {u_{2}} & {u_{3}} \\ {v_{1}} & {v_{2}} & {v_{3}} \\ {w_{1}} & {w_{2}} & {w_{3}}\end{array}\right|
 $$
-which is the volume of a parallelepiped determined by $u,v,,$
+which is the volume of a parallelepiped determined by $u,v,w​$
 
 ![1555230933438](assets/1555230933438.png)
+
+A vector equation for the line $L$ through $P_{0}\left(x_{0}, y_{0}, z_{0}\right)$ parallel to $v$ is
+$$
+\mathbf{r}(t)=\mathbf{r}_{0}+t \mathbf{v}, \quad-\infty<t<\infty
+$$
+The distance from $S​$ to the line through $P​$ parallel to $v​$ is $|\overrightarrow{P S}| \sin \theta​$.
+
+Recall that $\sin \theta​$ is
+$$
+\sin \theta=\frac{|\overrightarrow{P S} \times \mathbf{v}|}{|\mathbf{v}||\overrightarrow{P S}|}
+$$
+hence
+$$
+d=\frac{|\overrightarrow{P S} \times \mathbf{v}|}{|\mathbf{v}|}
+$$
+![1555241706172](assets/1555241706172.png)
+
+Let $n$ is normal vector, the plane through $P_{0}\left(x_{0}, y_{0}, z_{0}\right)$ normal to $\mathbf{n}=A \mathbf{i}+B \mathbf{j}+C \mathbf{k}$ has component equation
+$$
+A\left(x-x_{0}\right)+B\left(y-y_{0}\right)+C\left(z-z_{0}\right)=0
+$$
+simplified:
+$$
+A x+B y+C z=A x_{0}+B y_{0}+C z_{0}
+$$
+ 
